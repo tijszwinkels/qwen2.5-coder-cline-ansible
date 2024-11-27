@@ -1,0 +1,18 @@
+---
+- name: Setup Ollama on remote host
+  hosts: ollama_host
+  become: yes
+  tasks:
+    - name: Install Ollama
+      shell: curl -fsSL https://ollama.com/install.sh | sh
+
+    - name: Pull the model
+      command: ollama pull qwen2.5-coder:32b-instruct-fp16
+
+    - name: Upload the model file to remote host
+      copy:
+        src: qwen2.5-coder-cline.modelfile
+        dest: /tmp/qwen2.5-coder-cline.modelfile
+
+    - name: Create a new model with the provided file
+      command: ollama create qwen2.5-coder-cline:32b-instruct-fp16 --file /tmp/qwen2.5-coder-cline.modelfile
