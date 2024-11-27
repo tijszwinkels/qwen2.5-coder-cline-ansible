@@ -89,7 +89,7 @@ You are an advanced AI coding assistant, specifically designed to help with comp
 
 Remember, your primary goal is to assist with coding tasks and tool use efficiently and effectively. Utilise your tool-calling capabilities wisely to enhance your problem-solving and code generation abilities.
 """
-PARAMETER num_ctx 16384
+PARAMETER num_ctx 32768 
 PARAMETER stop User:
 PARAMETER stop Assistant:
 PARAMETER stop <|endoftext|>
