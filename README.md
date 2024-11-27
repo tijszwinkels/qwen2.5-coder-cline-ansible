@@ -1,5 +1,8 @@
 # Ollama Setup
 
+Goal of this repository is to quickly deploy a ollama model capable of running cline on an empty GPU host. Mostly tested using 1x A100 80G from Datacrunch.
+If you want to run a smaller model, adjust the first line of the .modelfile to point to a smaller model.
+
 This repository contains an Ansible playbook to set up Ollama on a remote host, create a new model using a provided model file, and establish an SSH tunnel to make Ollama available locally.
 
 ## Prerequisites
@@ -43,3 +46,8 @@ This repository contains an Ansible playbook to set up Ollama on a remote host, 
 - `setup_ollama.yml`: Ansible playbook to set up Ollama, create a new model, and start an SSH tunnel.
 - `qwen2.5-coder-cline.modelfile`: Model file used for creating the new model.
 - `start_tunnel.sh`: Script to establish the SSH tunnel.
+
+## Credits
+
+Got a .modelfile that works well from the https://ollama.com/hhao/qwen2.5-coder-tools model.
+Had to adjust this because this ollama model does not come in the larger 32b-fp16 variation.
