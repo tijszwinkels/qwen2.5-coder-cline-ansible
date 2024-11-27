@@ -1,6 +1,6 @@
 # Ollama Setup
 
-This repository contains an Ansible playbook to set up Ollama on a remote host and create a new model using a provided model file.
+This repository contains an Ansible playbook to set up Ollama on a remote host, create a new model using a provided model file, and establish an SSH tunnel to make Ollama available locally.
 
 ## Prerequisites
 - Ansible installed on your local machine.
@@ -31,7 +31,15 @@ This repository contains an Ansible playbook to set up Ollama on a remote host a
    ansible-playbook -i hosts.ini setup_ollama.yml
    ```
 
+4. **Start SSH Tunnel**:
+   After running the playbook, you can start an SSH tunnel to make Ollama available on `localhost` at port `11435`. Run the following script:
+   ```sh
+   ./start_tunnel.sh
+   ```
+
 ## Files
 
-- `setup_ollama.yml`: Ansible playbook to set up Ollama and create a new model.
+- `README.md`: Instructions for setting up Ollama using Ansible.
+- `setup_ollama.yml`: Ansible playbook to set up Ollama, create a new model, and start an SSH tunnel.
 - `qwen2.5-coder-cline.modelfile`: Model file used for creating the new model.
+- `start_tunnel.sh`: Script to establish the SSH tunnel.
