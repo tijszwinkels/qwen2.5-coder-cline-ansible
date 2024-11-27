@@ -46,6 +46,16 @@ This repository contains an Ansible playbook to set up Ollama on a remote host, 
 - `setup_ollama.yml`: Ansible playbook to set up Ollama, create a new model, and start an SSH tunnel.
 - `qwen2.5-coder-cline.modelfile`: Model file used for creating the new model.
 - `start_tunnel.sh`: Script to establish the SSH tunnel.
+- `.env` (optional): File containing client ID and secret for DataCrunch API authentication, only necessary for the `start_all_hibernated_instances.sh` script.
+- `start_all_hibernated_instances.sh`: Script to start all instances that are in the 'hibernating' state.
+
+## .env File
+
+If you plan to use the `start_all_hibernated_instances.sh` script, create a file named `.env` in the root of this repository with the following content, replacing the placeholders with your actual client ID and secret:
+```
+CLIENT_ID=your_client_id
+CLIENT_SECRET=your_client_secret
+```
 
 ## Credits
 

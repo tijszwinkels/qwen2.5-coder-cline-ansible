@@ -1,2 +1,5 @@
 # Ignore machine-specific configuration files
 hosts.ini
+
+# Ignore environment variables file
+.env
