@@ -29,6 +29,9 @@ INSTANCES=$(get_instances "$ACCESS_TOKEN")
 
 # Loop through instances and start any in 'hibernating' state
 echo "$INSTANCES" | jq -c '.[]' | while read -r instance; do
+
+    echo "$instance" | jq
+
     STATUS=$(echo "$instance" | jq -r '.status')
     INSTANCE_ID=$(echo "$instance" | jq -r '.id')
 
