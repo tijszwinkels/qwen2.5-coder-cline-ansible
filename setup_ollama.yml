@@ -26,7 +26,6 @@
           Restart=always
           RestartSec=3
           Environment="OLLAMA_KEEP_ALIVE=60m"
-          Environment="OLLAMA_NUM_PARALLEL=2"
           Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
           [Install]
