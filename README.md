@@ -29,11 +29,20 @@ This repository contains an Ansible playbook to set up vLLM on a remote host, an
 
 2. **Run the Ansible Playbook**:
 
+   You can run the Ansible playbook using the following command:
+
    ```sh
    ansible-playbook -i hosts.ini setup_vllm.yml
+   ```
+
+   Alternatively, you can use the `deploy.sh` script to run the playbook:
+
+   ```sh
+   ./deploy.sh
    ```
 
 ## Files
 
 - `README.md`: Instructions for setting up vLLM using Ansible.
 - `setup_vllm.yml`: Ansible playbook to set up vLLM and start the service.
+- `deploy.sh`: Script to run the Ansible playbook.
