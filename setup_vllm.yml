@@ -38,7 +38,7 @@
           Group=root
           WorkingDirectory=/root
           Environment="PATH=/opt/vllm_env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
-          ExecStart=/bin/bash -c 'source /opt/vllm_env/bin/activate && vllm serve Qwen/Qwen2.5-Coder-32B-Instruct --gpu-memory-utilization 0.97'
+          ExecStart=/bin/bash -c 'source /opt/vllm_env/bin/activate && vllm serve Qwen/Qwen2.5-Coder-32B-Instruct --gpu-memory-utilization 0.97 --disable-log-requests'
           Restart=always
           RestartSec=3
 
