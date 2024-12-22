@@ -9,4 +9,4 @@ USERNAME=$(echo $HOST_INFO | awk '{print $2}' | cut -d'=' -f2)
 PRIVATE_KEY_PATH=$(echo $HOST_INFO | awk '{print $3}' | cut -d'=' -f2)
 
 # Start SSH tunnel
-ssh -i $PRIVATE_KEY_PATH -L 11435:localhost:11434 $USERNAME@$HOSTNAME
+ssh -i $PRIVATE_KEY_PATH -L 8000:localhost:8000 $USERNAME@$HOSTNAME
